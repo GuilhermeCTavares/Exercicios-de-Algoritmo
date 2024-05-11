@@ -1,6 +1,6 @@
 # LISTAS DE EXERCÍCIOS DE ALGORITMO
 
-## Tópicos 
+## Exercícios 
 * [Lista 1](#_lista1)
 * [Lista 2](#_lista2)
 * [Vetores](#_Vetores)
