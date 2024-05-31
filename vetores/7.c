@@ -1,28 +1,31 @@
 #include <stdio.h>
 
 int main() {
-  int vetor[15], i, j, aux;
+  int vetor[30], i, j, contador, max_contador, elemento;
 
-  printf("Digite 15 números inteiros:\n");
-  for (i = 0; i < 15; i++) {
+  printf("Digite 30 números inteiros:\n");
+  for (i = 0; i < 30; i++) {
     printf("Número %d: ", i + 1);
     scanf("%d", &vetor[i]);
   }
 
-  for (i = 0; i < 14; i++) {
-    for (j = 0; j < 14 - i; j++) {
-      if (vetor[j] > vetor[j + 1]) {
-        aux = vetor[j];
-        vetor[j] = vetor[j + 1];
-        vetor[j + 1] = aux;
+  max_contador = 0;
+  elemento = vetor[0];
+
+  for (i = 0; i < 30; i++) {
+    contador = 0;
+    for (j = 0; j < 30; j++) {
+      if (vetor[i] == vetor[j]) {
+        contador++;
       }
+    }
+    if (contador > max_contador) {
+      max_contador = contador;
+      elemento = vetor[i];
     }
   }
 
-  printf("\nVetor ordenado:\n");
-  for (i = 0; i < 15; i++) {
-    printf("%d ", vetor[i]);
-  }
+  printf("\nO elemento que mais aparece é %d.\n", elemento);
 
   return 0;
 }
