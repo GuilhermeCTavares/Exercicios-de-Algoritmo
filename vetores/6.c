@@ -1,19 +1,22 @@
 #include <stdio.h>
 
 int main() {
-  int vetor[10], i, qtdPares = 0;
+  int vetorA[10], vetorB[10], i;
 
-  printf("Digite 10 números inteiros:\n");
+  printf("Digite 10 números inteiros para o vetor A:\n");
   for (i = 0; i < 10; i++) {
     printf("Número %d: ", i + 1);
-    scanf("%d", &vetor[i]);
-
-    if (vetor[i] % 2 == 0) {
-      qtdPares++;
-    }
+    scanf("%d", &vetorA[i]);
   }
 
-  printf("\nQuantidade de números pares: %d\n", qtdPares);
+  for (i = 0; i < 10; i++) {
+    vetorB[i] = vetorA[i];
+  }
+
+  printf("\nVetor B após a cópia:\n");
+  for (i = 0; i < 10; i++) {
+    printf("%d ", vetorB[i]);
+  }
 
   return 0;
-}
+}\
